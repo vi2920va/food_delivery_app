@@ -23,8 +23,8 @@ export type RootStackParamList = {
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLoggedIn, setLoggedIn] = useState(false);
   return (
     <NavigationContainer>
