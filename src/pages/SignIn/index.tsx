@@ -21,13 +21,13 @@ const SignIn = ({navigation}: SignInScreenProps) => {
   const canGoNext = email && password;
   const onChangeEmail = useCallback(
     (event: NativeSyntheticEvent<TextInputChangeEventData>) => {
-      setEmail(event.nativeEvent.text);
+      setEmail(event.nativeEvent.text.trim());
     },
     [],
   );
   const onChangePassword = useCallback(
     (event: NativeSyntheticEvent<TextInputChangeEventData>) => {
-      setPassword(event.nativeEvent.text);
+      setPassword(event.nativeEvent.text.trim());
     },
     [],
   );
