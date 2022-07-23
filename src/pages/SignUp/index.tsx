@@ -92,11 +92,14 @@ const SignUp = ({navigation}: SignUpScreenProps) => {
 
     try {
       setLoading(true);
-      const response = await axios.post('/User', {
-        name,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        `${__DEV__ ? 'localhost:3000' : 'url'}/User`,
+        {
+          name,
+          email,
+          password,
+        },
+      );
       setLoading(false);
       Alert.alert('알림', '회원가입 되었습니다.');
       console.log(response);
